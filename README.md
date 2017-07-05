@@ -24,3 +24,5 @@ Following libraries need to be imported in order to create a component:
 import React from 'react';
 import ReactNative from 'react-native';
 ```
+> Two important topics that go hand-in-hand are:
+> Component Nesting and Consuming Exported Objects

@@ -7,10 +7,11 @@ import { AppRegistry, Text } from 'react-native';
 
 // Create a component with JSX
 const App = () => (
-        <Text>Some Text</Text>
-    );
+    <Text>Some Text</Text>
+);
 
 // Render it to the device
 // ()=>App is an implicit return of the App function
-// Registering a component to the application 'albums'
+// Registering a component to the application 'albums
+// Only the 'root' component uses 'AppRegistry'
 AppRegistry.registerComponent('albums', () => App);

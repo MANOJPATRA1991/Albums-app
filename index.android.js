@@ -1,16 +1,23 @@
 // Index.android.js - place code in here for android
 
 // Import a library to help create a component
-import React from 'react';
-import { AppRegistry } from 'react-native';
-import Header from './src/components/header';
-
+import React, { Component } from 'react';
+import { AppRegistry, View } from 'react-native';
+import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 // Create a component with JSX
-const App = () => (
+class App extends Component {
     // Component Nesting
-    <Header headerText={'Albums'} />
-);
+    render() {
+        return (
+            <View>
+                <Header headerText={'Albums'} />
+                <AlbumList />
+            </View>
+        );
+    }
+}
 
 // Render it to the device
 // ()=>App is an implicit return of the App function

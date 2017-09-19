@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 // Make the Header component
 class Header extends Component {
     render() {
+        // destructuring to remove duplicate references to styles object
         const { textStyle, viewStyle } = styles;
         return (
             // View tag is used to make positioning easier

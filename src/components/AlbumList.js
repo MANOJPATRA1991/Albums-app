@@ -14,20 +14,25 @@ class AlbumList extends Component {
         this.state = { albums: [] };
     }
 
+    // function executed when component is about to be rendered
     componentWillMount() {
         // ASYNC HTTP Request to get albums from the API.
         // eslint-disable-next-line
         fetch('https://rallycoding.herokuapp.com/api/music_albums')
+        // resolve promise with json content
         .then(response => response.json())
         .then(data => this.setState({ albums: data }));
     }
 
+    renderAlbums() {
+        return this.state.albums.map(album => <Text>{ album.title }</Text>);
+    }
+
     render() {
         console.log(this.state);
-
         return (
             <View>
-                <Text>Album List</Text>
+                { this.renderAlbums() }
             </View>
         );
     }

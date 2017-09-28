@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { AppRegistry, View } from 'react-native';
 import Header from './src/components/Header';
 import AlbumList from './src/components/AlbumList';
-import Card from './src/components/Card';
+
 // Step-2: Create a component named App with JSX
 class App extends Component {
     // Component Nesting

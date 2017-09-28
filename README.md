@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## ES6 Important Features
 
 With ES6, each file has its own little apartment or shell
@@ -26,3 +27,8 @@ import ReactNative from 'react-native';
 ```
 > Two important topics that go hand-in-hand are:
 > Component Nesting and Consuming Exported Objects
+||||||| merged common ancestors
+=======
+# Albums-app
+An albums app created with react-native
+>>>>>>> 28c1b44cce31624afd5c3f9786067c5f446e1121

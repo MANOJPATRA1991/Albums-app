@@ -1,18 +1,37 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 
 class AlbumDetail extends Component {
     render() {
+        const { title, artist, thumbnail_image } = this.props.album;
+        const { headerContentStyle, thumbnailStyle } = styles;
         return (
             <Card>
                 <CardSection>
-                    <Text>{this.props.album.title}</Text>
+                    <View>
+                        <Image style={thumbnailStyle} source={{ uri: thumbnail_image }} />
+                    </View>
+                    <View style={headerContentStyle}>    
+                        <Text>{title}</Text>
+                        <Text>{artist}</Text>
+                    </View>
                 </CardSection>
             </Card>
         );
     }
 }
+
+const styles = {
+    headerContentStyle: {
+        flexDirection: 'column',
+        justifyContent: 'space-around'
+    },
+    thumbnailStyle: {
+        height: 50,
+        width: 50
+    }
+};
 
 export default AlbumDetail;

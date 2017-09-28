@@ -34,7 +34,7 @@ class AlbumList extends Component {
     render() {
         console.log(this.state);
         return (
-            <ScrollView>
+            <ScrollView style={{ marginBottom: 60 }}>
                 { this.renderAlbums() }
             </ScrollView>
         );

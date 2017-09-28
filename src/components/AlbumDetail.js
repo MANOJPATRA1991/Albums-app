@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button';
 
 class AlbumDetail extends Component {
     render() {
-        const { title, artist, thumbnail_image, image } = this.props.album;
+        const { title, artist, thumbnail_image, image, url } = this.props.album;
         const { headerContentStyle, 
                 headerTextStyle, 
                 thumbnailStyle, 
@@ -29,7 +29,9 @@ class AlbumDetail extends Component {
                 </CardSection>
 
                 <CardSection>
-                    <Button />
+                    <Button onPress={() => Linking.openURL(url)}>
+                        Buy Now
+                    </Button>
                 </CardSection>
             </Card>
         );

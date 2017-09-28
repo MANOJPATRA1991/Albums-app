@@ -1,22 +1,13 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { BoxShadow } from 'react-native-shadow';
 
 class Card extends Component {
     render() {
         const { containerStyle } = styles;
-        const shadowOpt = {
-            color: '#000',
-            radius: 2,
-            x: 0,
-            y: 2,
-            opacity: 0.1
-        };
         return (
-            <BoxShadow setting={shadowOpt}>
-                <View style={containerStyle}>
-                </View>
-            </BoxShadow>
+            <View style={containerStyle}>
+                {this.props.children}
+            </View>
         );
     }
 }
